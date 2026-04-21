@@ -155,7 +155,7 @@ curl -X POST http://localhost:3000/api/v1/otp/send \
   -H "Authorization: Bearer wotp_your_api_key" \
   -H "Content-Type: application/json" \
   -d '{
-    "phone": "6283834946034",
+    "phone": "6281234567890",
     "message": "Your verification code is 123456",
     "code": "123456",
     "expiryMinutes": 5
@@ -183,7 +183,7 @@ curl -X POST http://localhost:3000/api/v1/bulk/send \
   -H "Content-Type: application/json" \
   -d '{
     "recipients": [
-      {"phone": "6283834946034", "code": "1234", "name": "John"},
+      {"phone": "6281234567890", "code": "1234", "name": "John"},
       {"phone": "6281234567890", "code": "5678", "name": "Jane"}
     ],
     "template": "Hello {{name}}, your code is {{code}}"
@@ -196,7 +196,7 @@ curl -X POST http://localhost:3000/api/v1/scheduler/schedule \
   -H "Authorization: Bearer wotp_your_api_key" \
   -H "Content-Type: application/json" \
   -d '{
-    "phone": "6283834946034",
+    "phone": "6281234567890",
     "message": "Your code is 1234",
     "code": "1234",
     "scheduledTime": "2026-02-07T10:00:00Z",
@@ -306,7 +306,7 @@ DB_PATH=database.wodb
 # WhatsApp
 BOT_MOCK_MODE=false
 USE_PAIRING_CODE=true
-PAIRING_NUMBER=6283834946034
+PAIRING_NUMBER=6281234567890
 
 # Rate Limiting
 RATE_LIMIT_WINDOW_MS=3600000
